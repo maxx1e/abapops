@@ -22,7 +22,7 @@ RUN pip3 install https://github.com/SAP/PyRFC/releases/download/2.0.1/pyrfc-2.0.
 
 RUN curl -kL https://github.com/jfilak/sapcli/archive/master.tar.gz | tar -C /opt/ -zx
 
-RUN ln -sf /opt/sapcli-master/sap /usr/lib/python3.7/site-packages/ && \
+RUN ln -sf /opt/sapcli-master/sap /usr/local/lib/python3.7/dist-packages/ && \
     ln -sf /opt/sapcli-master/bin/sapcli /bin/sapcli
 
 RUN sapcli --help
