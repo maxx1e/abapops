@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-RUN apt-get update && apt-get install -y --no-install-recommends curl jq yq ca-certificates tar python3 python3-requests python3-openssl python3-pip && \
+RUN apt-get update && apt-get install -y --no-install-recommends curl jq ca-certificates tar python3 python3-requests python3-openssl python3-pip && \
     rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /usr/local/sap/nwrfcsdk
 ENV SAPNWRFC_HOME=/usr/local/sap/nwrfcsdk
