@@ -34,6 +34,6 @@ RUN echo "[INFO] Handle users permission." && \
     useradd --home-dir "${SAP_USER_HOME}" --create-home --shell /bin/bash --user-group --uid 1001 --comment 'DevOps SAP tool' --password "$(echo WeLoveSap |openssl passwd -1 -stdin)" sapper && \
     # Allow anybody to write into the user HOME
     chmod a+w "${SAP_USER_HOME}"
-USER sapper
+# USER sapper
 
 WORKDIR /var/tmp
